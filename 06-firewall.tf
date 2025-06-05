@@ -1,6 +1,6 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall
 
-#Planetrock VPC
+#Planetrock VPC Firewalls
 resource "google_compute_firewall" "allow-kiya-ssh" {
   name    = "allow-kiya-ssh"
   network = google_compute_network.planetrock.name

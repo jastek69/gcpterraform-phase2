@@ -1,5 +1,6 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_router_nat
-# Router
+
+# Router Iowa
 resource "google_compute_router_nat" "iowanat" {
   name   = "iowanat"
   router = google_compute_router.iowarouter.name
@@ -9,7 +10,7 @@ resource "google_compute_router_nat" "iowanat" {
   nat_ip_allocate_option             = "MANUAL_ONLY"
 
   subnetwork {
-    name                    = google_compute_subnetwork.planetrock-prod-main-us.id
+    name                    = google_compute_subnetwork.planetrock-prod-main-iowa.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 
